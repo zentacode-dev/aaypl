@@ -2,105 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | All Africa Young Political Leaders (AAYPL)</title>
+  <title>Contact | AAYPL</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Contact AAYPL: Send us a message, get involved, or reach out for partnership.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
-  <link rel="icon" href="assets/aaypl-favicon.png" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="bg-white text-black font-sans antialiased">
-  <!-- Navbar -->
-  <nav class="sticky top-0 z-50 bg-white/95 border-b border-blue-900 shadow-sm" id="navbar">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="assets/aaypl-logo.png" alt="AAYPL Logo" class="h-10 w-10 rounded-full border-2 border-blue-900" />
-        <span class="text-2xl font-extrabold text-blue-900 tracking-wide">AAYPL</span>
+<body>
+  <nav>
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL
       </a>
-      <div class="hidden md:flex items-center gap-7 text-base font-semibold">
-        <a href="index.html" class="nav-link text-blue-900 hover:text-gold-600">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="nav-link">Blog</a>
-        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="nav-link">Events</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="register.html" class="bg-blue-900 text-white px-4 py-2 rounded-full shadow hover:bg-gold-600 hover:text-blue-900 transition">Join Now</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-3xl text-blue-900">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <!-- mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-blue-900 shadow-lg">
-      <div class="flex flex-col gap-2 py-3 px-6">
-        <a href="index.html" class="nav-link text-blue-900">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="nav-link">Blog</a>
-        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="nav-link">Events</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="register.html" class="bg-blue-900 text-white px-4 py-2 rounded-full shadow hover:bg-gold-600 transition w-max">Join Now</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html" class="join-btn">Join Now</a>
       </div>
     </div>
   </nav>
-
-  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-gold-500 py-16 text-white text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Contact Us</h1>
-    <p class="max-w-2xl mx-auto text-lg font-medium">Have a question, partnership inquiry, or want to get involved? Send us a message or connect with us on WhatsApp!</p>
-  </section>
-
-  <section class="max-w-xl mx-auto px-4 py-16">
-    <form id="contactForm" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
-      <div>
-        <label class="block font-bold mb-2 text-blue-900" for="name">Full Name</label>
-        <input required type="text" id="name" name="name" placeholder="Your name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+  <section>
+    <h2 class="section-title">Contact Us</h2>
+    <div class="mission-content">
+      <div class="mission-main">
+        <p>
+          Want to get in touch? Fill the form below or email us at
+          <a href="mailto:info@aaypl.org" style="color:#ffd700;">info@aaypl.org</a>
+        </p>
+        <form style="max-width:400px;margin-top:2rem;" onsubmit="event.preventDefault();alert('Thank you! We will reply soon.');this.reset();">
+          <div style="margin-bottom:1em;">
+            <input type="text" name="name" required placeholder="Your name" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+          </div>
+          <div style="margin-bottom:1em;">
+            <input type="email" name="email" required placeholder="Your email" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+          </div>
+          <div style="margin-bottom:1em;">
+            <textarea name="message" required placeholder="Type your message here" rows="4" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"></textarea>
+          </div>
+          <button class="cta-btn" type="submit">Send Message</button>
+        </form>
       </div>
-      <div>
-        <label class="block font-bold mb-2 text-blue-900" for="email">Email Address</label>
-        <input required type="email" id="email" name="email" placeholder="you@email.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
-      </div>
-      <div>
-        <label class="block font-bold mb-2 text-blue-900" for="message">Message</label>
-        <textarea required id="message" name="message" rows="5" placeholder="Your message..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500"></textarea>
-      </div>
-      <button type="submit" class="bg-blue-900 text-gold-500 px-6 py-2 rounded-full font-bold shadow hover:bg-blue-800 transition w-full">Send Message</button>
-      <a href="https://wa.me/2348000000000" target="_blank" class="flex justify-center items-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full gap-2 text-lg font-semibold transition mt-4">
-        <i class="fab fa-whatsapp"></i> Reach Us on WhatsApp
-      </a>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-8 px-4 mt-10">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="flex items-center gap-3">
-        <img src="assets/aaypl-logo.png" alt="AAYPL Logo" class="h-8 w-8 rounded-full border-2 border-gold-500">
-        <span class="font-extrabold text-lg">AAYPL</span>
-      </div>
-      <div class="flex gap-6">
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="hover:underline">Blog</a>
-        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="hover:underline">Events</a>
-        <a href="register.html" class="hover:underline">Join</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </div>
-      <div class="flex gap-4 text-xl">
-        <a href="#" aria-label="Twitter" class="hover:text-gold-500"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" aria-label="Facebook" class="hover:text-gold-500"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Instagram" class="hover:text-gold-500"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn" class="hover:text-gold-500"><i class="fab fa-linkedin"></i></a>
+      <div class="mission-side">
+        <div class="mission-quote">
+          “We value your ideas, questions, and feedback!”
+        </div>
       </div>
     </div>
-    <div class="border-t border-gold-500 mt-6 pt-4 text-center text-sm text-gold-400">
-      &copy; 2025 All Africa Young Political Leaders (AAYPL). All Rights Reserved.
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo"><img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Join</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><span>🐦</span></a>
+        <a href="#"><span>📘</span></a>
+        <a href="#"><span>📸</span></a>
+        <a href="#"><span>🔗</span></a>
+      </div>
     </div>
+    <div style="margin-top:2em;font-size:0.96rem;color:#ffd700;">&copy; 2025 All Africa Young Political Leaders (AAYPL). All Rights Reserved.</div>
   </footer>
-  <a href="https://wa.me/2348000000000" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center text-3xl">
-    <i class="fab fa-whatsapp"></i>
-    <span class="sr-only">WhatsApp</span>
-  </a>
-  <button id="scrollToTopBtn" class="hidden fixed bottom-24 right-8 z-50 bg-blue-900 text-gold-500 rounded-full p-3 shadow-lg text-2xl hover:bg-blue-800 transition">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  <script src="assets/main.js"></script>
+  <a href="https://wa.me/2348000000000" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
+  <button id="scrollToTopBtn" title="Back to Top">↑</button>
+  <script>
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300) scrollBtn.style.display = 'block';
+      else scrollBtn.style.display = 'none';
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:"smooth"}));
+  </script>
 </body>
 </html>
