@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
   <style>
-    /* Extra styles to improve the register button visually */
     #registerForm .cta-btn {
       display: inline-block;
       width: 100%;
@@ -63,7 +62,13 @@
         <p>
           Ready to make a difference? Fill out the form below to become a member of AAYPL, connect with other passionate young leaders, and gain exclusive access to events, resources, and mentorship opportunities across Africa.
         </p>
-        <form id="registerForm" style="max-width:500px;margin-top:2rem;background:#fefefe;padding:2rem 1.5rem;border-radius:18px;box-shadow:0 2px 12px #181c3220;" onsubmit="event.preventDefault();alert('Thank you for registering! Our team will reach out to you soon.');this.reset();">
+        <!-- Start Formspree Form -->
+        <form
+          id="registerForm"
+          action="https://formspree.io/f/xzzvgpqz"
+          method="POST"
+          style="max-width:500px;margin-top:2rem;background:#fefefe;padding:2rem 1.5rem;border-radius:18px;box-shadow:0 2px 12px #181c3220;"
+        >
           <div style="margin-bottom:1.2em;">
             <label for="fullname" style="font-weight:600;display:block;margin-bottom:0.4em;">Full Name *</label>
             <input type="text" id="fullname" name="fullname" required placeholder="Your full name" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
@@ -195,6 +200,18 @@
   <a href="https://wa.me/2348000000000" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
   <button id="scrollToTopBtn" title="Back to Top">↑</button>
   <script>
+    // WhatsApp group invite link (replace with your actual group invite link)
+    const whatsappGroup = "https://chat.whatsapp.com/YOUR_GROUP_INVITE_CODE";
+
+    // On successful Formspree submission, redirect to WhatsApp group
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      // Let the real submission happen, then redirect after Formspree processes (for best reliability, use Formspree's built-in redirect!)
+      setTimeout(function(){
+        window.location.href = whatsappGroup;
+      }, 1800); // Allow some time for Formspree to process
+    });
+
+    // Scroll to top button logic
     const scrollBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
       if(window.scrollY > 300) scrollBtn.style.display = 'block';
