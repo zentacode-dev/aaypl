@@ -5,6 +5,38 @@
   <title>Register | AAYPL</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Extra styles to improve the register button visually */
+    #registerForm .cta-btn {
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, #ffd700 60%, #f7c948 100%);
+      color: #181c32;
+      font-weight: 800;
+      font-size: 1.13rem;
+      letter-spacing: 0.5px;
+      padding: 1em 0;
+      margin-top: 1em;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 0 2px 8px rgba(24,28,50,0.10);
+      cursor: pointer;
+      transition: background 0.16s, color 0.16s, transform 0.14s;
+      outline: none;
+      text-align: center;
+    }
+    #registerForm .cta-btn:hover, #registerForm .cta-btn:focus {
+      background: #181c32;
+      color: #ffd700;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px #181c3240;
+    }
+    #registerForm .cta-btn:active {
+      background: #ffd700;
+      color: #181c32;
+      transform: scale(0.98);
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -86,7 +118,7 @@
               Subscribe to our newsletter for updates and opportunities
             </label>
           </div>
-          <button class="cta-btn" type="submit" style="width:100%;margin-top:1em;">Register Now</button>
+          <button class="cta-btn" type="submit" id="register-now-btn">Register Now</button>
         </form>
         <div style="margin-top:2.5em;font-size:1.06rem;color:#181c32;">
           <b>Already a member?</b> <a href="contact.html" style="color:#ffd700;">Contact us</a> to update your profile.
