@@ -5,8 +5,40 @@
   <title>Contact | AAYPL</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    #contactForm .cta-btn {
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, #ffd700 60%, #f7c948 100%);
+      color: #181c32;
+      font-weight: 800;
+      font-size: 1.13rem;
+      letter-spacing: 0.5px;
+      padding: 1em 0;
+      margin-top: 1em;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 0 2px 8px rgba(24,28,50,0.10);
+      cursor: pointer;
+      transition: background 0.16s, color 0.16s, transform 0.14s;
+      outline: none;
+      text-align: center;
+    }
+    #contactForm .cta-btn:hover, #contactForm .cta-btn:focus {
+      background: #181c32;
+      color: #ffd700;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px #181c3240;
+    }
+    #contactForm .cta-btn:active {
+      background: #ffd700;
+      color: #181c32;
+      transform: scale(0.98);
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <nav>
     <div class="navbar-inner">
       <a href="index.html" class="brand">
@@ -22,34 +54,65 @@
       </div>
     </div>
   </nav>
+
   <section>
     <h2 class="section-title">Contact Us</h2>
     <div class="mission-content">
       <div class="mission-main">
         <p>
-          Want to get in touch? Fill the form below or email us at
-          <a href="mailto:info@aaypl.org" style="color:#ffd700;">info@aaypl.org</a>
+          We’d love to hear from you! Fill out the form below or email us directly at
+          <a href="mailto:aayplorg@proton.me" style="color:#ffd700;font-weight:bold">aayplorg@proton.me</a>.
         </p>
-        <form style="max-width:400px;margin-top:2rem;" onsubmit="event.preventDefault();alert('Thank you! We will reply soon.');this.reset();">
-          <div style="margin-bottom:1em;">
-            <input type="text" name="name" required placeholder="Your name" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xdkdznvv"
+          method="POST"
+          style="max-width:500px;margin-top:2rem;background:#fefefe;padding:2rem 1.5rem;border-radius:18px;box-shadow:0 2px 12px #181c3220;"
+        >
+          <div style="margin-bottom:1.2em;">
+            <label for="name" style="font-weight:600;display:block;margin-bottom:0.4em;">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <div style="margin-bottom:1em;">
-            <input type="email" name="email" required placeholder="Your email" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+          <div style="margin-bottom:1.2em;">
+            <label for="email" style="font-weight:600;display:block;margin-bottom:0.4em;">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <div style="margin-bottom:1em;">
-            <textarea name="message" required placeholder="Type your message here" rows="4" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"></textarea>
+          <div style="margin-bottom:1.2em;">
+            <label for="subject" style="font-weight:600;display:block;margin-bottom:0.4em;">Subject *</label>
+            <input type="text" id="subject" name="subject" required placeholder="Subject (e.g. Partnership, Membership...)" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <button class="cta-btn" type="submit">Send Message</button>
+          <div style="margin-bottom:1.2em;">
+            <label for="message" style="font-weight:600;display:block;margin-bottom:0.4em;">Your Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Type your message here..." style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"></textarea>
+          </div>
+          <button class="cta-btn" type="submit" id="contact-send-btn">Send Message</button>
         </form>
+        <div style="margin-top:2em;font-size:1.06rem;color:#181c32;">
+          <b>Other Enquiries?</b> Message us on
+          <a href="https://wa.me/2348000000000" style="color:#25d366;font-weight:bold;">WhatsApp</a>
+        </div>
       </div>
       <div class="mission-side">
-        <div class="mission-quote">
-          “We value your ideas, questions, and feedback!”
+        <div class="mission-quote" style="background:#fff8d1;">
+          “Your questions, feedback, and ideas help us grow and serve Africa’s youth better.”
         </div>
+        <div class="mission-quote" style="background:#e7eaf5;border-left-color:#181c32;">
+          “We reply to all messages within 48 hours.”
+        </div>
+        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="AAYPL Team" style="width:100%;border-radius:12px;box-shadow:0 2px 12px #181c3240;margin-top:1.5em;">
       </div>
     </div>
   </section>
+
+  <section class="cta-section">
+    <h2>Let’s Connect & Build Africa Together!</h2>
+    <p>
+      Whether you have a question, want to collaborate, or need support, our team is ready to help.<br>
+      Your voice matters!
+    </p>
+    <a href="register.html" class="cta-btn">Join the Movement</a>
+  </section>
+
   <footer>
     <div class="footer-content">
       <div class="footer-logo"><img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL</div>
@@ -71,13 +134,23 @@
   </footer>
   <a href="https://wa.me/2348000000000" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
   <button id="scrollToTopBtn" title="Back to Top">↑</button>
+
   <script>
+    // Scroll to top button logic
     const scrollBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
       if(window.scrollY > 300) scrollBtn.style.display = 'block';
       else scrollBtn.style.display = 'none';
     });
     scrollBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:"smooth"}));
+
+    // Optional: Show a thank you message after Formspree submits, without redirect
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      // Let the form submit and reload the page, but show feedback for a second before any reload
+      setTimeout(function(){
+        alert("Thank you for reaching out to AAYPL! We'll respond soon.");
+      }, 100);
+    });
   </script>
 </body>
 </html>
