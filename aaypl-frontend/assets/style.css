@@ -1,14 +1,519 @@
-/* Gold and blue custom colors for Tailwind overrides and custom classes */
-.text-gold-500 { color: #FFD700; }
-.text-gold-600 { color: #E6C200; }
-.text-gold-700 { color: #C2A600; }
-.bg-gold-500 { background-color: #FFD700; }
-.bg-gold-100 { background-color: #FFF8E1; }
-.border-gold-500 { border-color: #FFD700; }
-.hover\:text-gold-500:hover { color: #FFD700; }
-.hover\:bg-gold-600:hover { background-color: #E6C200; }
-.hover\:text-gold-600:hover { color: #E6C200; }
+/* AAYPL Custom CSS - Deep Blue & Gold Theme */
 
-.nav-link {
-  @apply text-blue-900 hover:text-gold-600 transition-colors duration-150;
+/* Base styles */
+body {
+  background: #fff;
+  color: #181c32;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+nav {
+  background: #181c32;
+  border-bottom: 3px solid #ffd700;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(24,28,50,0.08);
+}
+nav .navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 1.2rem;
+}
+nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #ffd700;
+  text-decoration: none;
+}
+nav .brand img {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background: #fff;
+}
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color .2s;
+}
+nav .nav-links a:hover {
+  color: #ffd700;
+}
+nav .join-btn {
+  background: #ffd700;
+  color: #181c32;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  margin-left: 1.5rem;
+  border: none;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  box-shadow: 0 2px 8px rgba(24,28,50,0.08);
+}
+nav .join-btn:hover {
+  background: #fff;
+  color: #181c32;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(130deg, #181c32 60%, #ffd700 100%);
+  color: #fff;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1.2rem 4rem 1.2rem;
+  position: relative;
+}
+.hero h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 0.7em;
+  letter-spacing: -2px;
+  color: #ffd700;
+  text-shadow: 0 6px 32px #181c32;
+}
+.hero p {
+  font-size: 1.25rem;
+  max-width: 560px;
+  margin: 0 auto 2em auto;
+  color: #fff;
+  font-weight: 500;
+}
+.hero .cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.hero .cta-btn {
+  background: #ffd700;
+  color: #181c32;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  padding: 0.7em 2em;
+  border: none;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  margin-bottom: 0.2em;
+  box-shadow: 0 2px 8px rgba(24,28,50,0.16);
+}
+.hero .cta-btn:hover {
+  background: #fff;
+  color: #181c32;
+}
+.hero .cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+.hero .cta-btn.secondary:hover {
+  background: #fff;
+  color: #181c32;
+}
+
+/* SECTION HEADINGS */
+.section-title {
+  color: #181c32;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* MISSION & GOALS */
+.mission-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.2rem 2rem 1.2rem;
+}
+.mission-main, .mission-side {
+  flex: 1 1 350px;
+  min-width: 280px;
+}
+.mission-main p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2em;
+}
+.mission-col {
+  background: #181c32;
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.5em 1.2em;
+  margin-bottom: 1.2em;
+  box-shadow: 0 2px 12px rgba(24,28,50,0.10);
+}
+.mission-col.yellow {
+  background: #ffd700;
+  color: #181c32;
+}
+.mission-col h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+.mission-col ul {
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+.mission-quote {
+  background: #fff8d1;
+  border-left: 7px solid #ffd700;
+  border-radius: 12px;
+  margin-bottom: 1.3em;
+  padding: 1.2em;
+  font-style: italic;
+  font-size: 1.06rem;
+  color: #181c32;
+  box-shadow: 0 1px 8px rgba(24,28,50,0.07);
+}
+.mission-quote .author {
+  display: block;
+  font-style: normal;
+  margin-top: 1em;
+  font-weight: 700;
+  color: #181c32;
+}
+
+/* STATS SECTION */
+.stats-section {
+  background: linear-gradient(90deg, #181c32 70%, #ffd700 100%);
+  color: #fff;
+  padding: 2.5rem 0;
+}
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.stat {
+  text-align: center;
+}
+.stat .stat-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffd700;
+}
+.stat .stat-label {
+  font-size: 1.09rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.5em;
+}
+
+/* BLOG PREVIEW */
+.blog-preview {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.2rem;
+}
+.blog-preview-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(24,28,50,0.08);
+  overflow: hidden;
+  width: 330px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s;
+  text-decoration: none;
+  color: inherit;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 24px rgba(24,28,50,0.13);
+}
+.blog-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.blog-card .blog-meta {
+  padding: 1.1rem;
+}
+.blog-card .blog-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: #181c32;
+  color: #ffd700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.blog-card .blog-title {
+  font-size: 1.16rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.blog-card .blog-desc {
+  color: #555;
+  font-size: 0.98rem;
+}
+
+/* CALL TO ACTION */
+.cta-section {
+  background: #ffd700;
+  color: #181c32;
+  padding: 3.5rem 1.2rem;
+  text-align: center;
+  position: relative;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.7em;
+}
+.cta-section p {
+  font-size: 1.12rem;
+  margin-bottom: 2em;
+}
+.cta-section .cta-btn {
+  background: #181c32;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  box-shadow: 0 2px 12px rgba(24,28,50,0.13);
+}
+.cta-section .cta-btn:hover {
+  background: #fff;
+  color: #181c32;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+  background: #181c32;
+  color: #ffd700;
+  padding: 2.5rem 1.2rem;
+  text-align: center;
+  border-radius: 18px;
+  max-width: 530px;
+  margin: 4rem auto 0 auto;
+  box-shadow: 0 1px 14px rgba(24,28,50,0.09);
+}
+.newsletter-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: #ffd700;
+}
+.newsletter-section input[type="email"] {
+  padding: 0.6em 1em;
+  border-radius: 100px 0 0 100px;
+  border: none;
+  font-size: 1.1rem;
+  outline: none;
+  width: 60%;
+  max-width: 250px;
+}
+.newsletter-section button {
+  padding: 0.6em 1.3em;
+  border-radius: 0 100px 100px 0;
+  border: none;
+  background: #ffd700;
+  color: #181c32;
+  font-weight: bold;
+  font-size: 1.07rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.newsletter-section button:hover {
+  background: #fff;
+}
+
+/* FOOTER */
+footer {
+  background: #181c32;
+  color: #fff;
+  padding: 2.3rem 1.2rem 1.2rem 1.2rem;
+  text-align: center;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.footer-links {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-bottom: 0.3em;
+}
+.footer-links a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+.footer-social {
+  display: flex;
+  gap: 1.3rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.7em;
+}
+.footer-social a {
+  color: #ffd700;
+  transition: color .2s;
+}
+.footer-social a:hover {
+  color: #fff;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #ffd700;
+}
+.footer-logo img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background: #fff;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  padding: 1.1rem;
+  font-size: 2rem;
+  z-index: 90;
+  box-shadow: 0 2px 12px rgba(24,28,50,0.15);
+  transition: background .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-btn:hover {
+  background: #128c7e;
+}
+
+/* SCROLL TO TOP BUTTON */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 6.3rem;
+  right: 2.4rem;
+  background: #181c32;
+  color: #ffd700;
+  border-radius: 50%;
+  padding: 1.1rem;
+  font-size: 1.7rem;
+  border: none;
+  z-index: 90;
+  box-shadow: 0 2px 10px rgba(24,28,50,0.12);
+  transition: background .2s;
+  display: none;
+}
+#scrollToTopBtn:hover {
+  background: #ffd700;
+  color: #181c32;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mission-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.2rem 2rem 1.2rem;
+  }
+  .blog-preview-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stats-row {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  nav .nav-links {
+    display: none;
+  }
+  nav .mobile-nav {
+    display: block;
+    margin-top: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .mission-content {
+    padding: 2rem 0.5rem;
+  }
+  .blog-preview,
+  .cta-section {
+    padding: 2rem 0.7rem;
+  }
+  .footer-content {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 3rem 0.4rem 2rem 0.4rem;
+  }
+  .cta-section,
+  .newsletter-section {
+    padding: 1.3rem 0.4rem;
+  }
+  .mission-content {
+    padding: 1.2rem 0.2rem;
+  }
+}
+
+/* Hide elements with .hidden */
+.hidden {
+  display: none !important;
 }
