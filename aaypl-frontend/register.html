@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | All Africa Young Political Leaders (AAYPL)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="AAYPL Member Registration: Join All Africa Young Political Leaders, connect, and make impact across Africa.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
+  <link rel="icon" href="assets/aaypl-favicon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-white text-black font-sans antialiased">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 border-b border-blue-900 shadow-sm" id="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/aaypl-logo.png" alt="AAYPL Logo" class="h-10 w-10 rounded-full border-2 border-blue-900" />
+        <span class="text-2xl font-extrabold text-blue-900 tracking-wide">AAYPL</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-base font-semibold">
+        <a href="index.html" class="nav-link text-blue-900 hover:text-gold-600">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="nav-link">Blog</a>
+        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="register.html" class="bg-blue-900 text-white px-4 py-2 rounded-full shadow hover:bg-gold-600 hover:text-blue-900 transition">Join Now</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-3xl text-blue-900">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-blue-900 shadow-lg">
+      <div class="flex flex-col gap-2 py-3 px-6">
+        <a href="index.html" class="nav-link text-blue-900">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="nav-link">Blog</a>
+        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="register.html" class="bg-blue-900 text-white px-4 py-2 rounded-full shadow hover:bg-gold-600 transition w-max">Join Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-gold-500 py-16 text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">AAYPL Member Registration</h1>
+    <p class="max-w-2xl mx-auto text-lg font-medium">Be part of Africa’s largest network of young political leaders. Fill the form to join our movement and connect with your state WhatsApp group.</p>
+  </section>
+
+  <section class="max-w-xl mx-auto px-4 py-16">
+    <form id="registerForm" action="https://formspree.io/f/mnqedkvw" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="fullname">Full Name</label>
+        <input required type="text" id="fullname" name="Full Name" placeholder="Your full name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="dob">Date of Birth</label>
+        <input required type="date" id="dob" name="Date of Birth" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="country">Country</label>
+        <select id="country" name="Country" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500">
+          <option value="Nigeria" selected>Nigeria</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Kenya">Kenya</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div id="nigeriaStatesDiv">
+        <label class="block font-bold mb-2 text-blue-900" for="state">Nigerian State</label>
+        <select id="state" name="Nigerian State" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500">
+          <option value="">Select State</option>
+          <option value="Abia">Abia</option>
+          <option value="Adamawa">Adamawa</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
+          <option value="Anambra">Anambra</option>
+          <option value="Bauchi">Bauchi</option>
+          <option value="Bayelsa">Bayelsa</option>
+          <option value="Benue">Benue</option>
+          <option value="Borno">Borno</option>
+          <option value="Cross River">Cross River</option>
+          <option value="Delta">Delta</option>
+          <option value="Ebonyi">Ebonyi</option>
+          <option value="Edo">Edo</option>
+          <option value="Ekiti">Ekiti</option>
+          <option value="Enugu">Enugu</option>
+          <option value="FCT">FCT</option>
+          <option value="Gombe">Gombe</option>
+          <option value="Imo">Imo</option>
+          <option value="Jigawa">Jigawa</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Kano">Kano</option>
+          <option value="Katsina">Katsina</option>
+          <option value="Kebbi">Kebbi</option>
+          <option value="Kogi">Kogi</option>
+          <option value="Kwara">Kwara</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Nasarawa">Nasarawa</option>
+          <option value="Niger">Niger</option>
+          <option value="Ogun">Ogun</option>
+          <option value="Ondo">Ondo</option>
+          <option value="Osun">Osun</option>
+          <option value="Oyo">Oyo</option>
+          <option value="Plateau">Plateau</option>
+          <option value="Rivers">Rivers</option>
+          <option value="Sokoto">Sokoto</option>
+          <option value="Taraba">Taraba</option>
+          <option value="Yobe">Yobe</option>
+          <option value="Zamfara">Zamfara</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="phone">Phone Number</label>
+        <input required type="tel" id="phone" name="Phone Number" placeholder="e.g. +2348000000000" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="email">Email Address</label>
+        <input required type="email" id="email" name="Email Address" placeholder="you@email.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="location">Location (City/Town)</label>
+        <input required type="text" id="location" name="Location" placeholder="Your city or town" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <div>
+        <label class="block font-bold mb-2 text-blue-900" for="interest">Interest in Political Area <span class="font-normal text-gray-500">(optional)</span></label>
+        <input type="text" id="interest" name="Interest in Political Area" placeholder="e.g. Governance, Advocacy" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" />
+      </div>
+      <button type="submit" class="bg-blue-900 text-gold-500 px-6 py-2 rounded-full font-bold shadow hover:bg-blue-800 transition w-full">Submit Registration</button>
+      <div id="regSuccessMsg" class="hidden text-green-700 bg-green-100 rounded-lg px-4 py-3 text-center mt-4 font-bold text-lg">
+        You’ll be redirected to your state WhatsApp group.
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8 px-4 mt-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/aaypl-logo.png" alt="AAYPL Logo" class="h-8 w-8 rounded-full border-2 border-gold-500">
+        <span class="font-extrabold text-lg">AAYPL</span>
+      </div>
+      <div class="flex gap-6">
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="https://blog.aaypl.org" target="_blank" rel="noopener" class="hover:underline">Blog</a>
+        <a href="https://events.aaypl.org" target="_blank" rel="noopener" class="hover:underline">Events</a>
+        <a href="register.html" class="hover:underline">Join</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <div class="flex gap-4 text-xl">
+        <a href="#" aria-label="Twitter" class="hover:text-gold-500"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gold-500"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-gold-500"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-gold-500"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="border-t border-gold-500 mt-6 pt-4 text-center text-sm text-gold-400">
+      &copy; 2025 All Africa Young Political Leaders (AAYPL). All Rights Reserved.
+    </div>
+  </footer>
+  <a href="https://wa.me/2348000000000" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center text-3xl">
+    <i class="fab fa-whatsapp"></i>
+    <span class="sr-only">WhatsApp</span>
+  </a>
+  <button id="scrollToTopBtn" class="hidden fixed bottom-24 right-8 z-50 bg-blue-900 text-gold-500 rounded-full p-3 shadow-lg text-2xl hover:bg-blue-800 transition">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="assets/main.js"></script>
+</body>
+</html>

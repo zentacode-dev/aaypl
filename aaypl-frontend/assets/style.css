@@ -1,0 +1,14 @@
+/* Gold and blue custom colors for Tailwind overrides and custom classes */
+.text-gold-500 { color: #FFD700; }
+.text-gold-600 { color: #E6C200; }
+.text-gold-700 { color: #C2A600; }
+.bg-gold-500 { background-color: #FFD700; }
+.bg-gold-100 { background-color: #FFF8E1; }
+.border-gold-500 { border-color: #FFD700; }
+.hover\:text-gold-500:hover { color: #FFD700; }
+.hover\:bg-gold-600:hover { background-color: #E6C200; }
+.hover\:text-gold-600:hover { color: #E6C200; }
+
+.nav-link {
+  @apply text-blue-900 hover:text-gold-600 transition-colors duration-150;
+}
