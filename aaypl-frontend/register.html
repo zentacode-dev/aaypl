@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav>
     <div class="navbar-inner">
       <a href="index.html" class="brand">
@@ -22,45 +23,124 @@
       </div>
     </div>
   </nav>
+
   <section>
-    <h2 class="section-title">Join AAYPL</h2>
+    <h2 class="section-title">Join the AAYPL Community</h2>
     <div class="mission-content">
       <div class="mission-main">
         <p>
-          Fill out the form below to become a member of AAYPL and join a movement of young, passionate leaders across Africa!
+          Ready to make a difference? Fill out the form below to become a member of AAYPL, connect with other passionate young leaders, and gain exclusive access to events, resources, and mentorship opportunities across Africa.
         </p>
-        <form style="max-width:400px;margin-top:2rem;" onsubmit="event.preventDefault();alert('Thank you for registering! We will contact you soon.');this.reset();">
-          <div style="margin-bottom:1em;">
-            <input type="text" name="fullname" required placeholder="Full Name" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+        <form id="registerForm" style="max-width:500px;margin-top:2rem;background:#fefefe;padding:2rem 1.5rem;border-radius:18px;box-shadow:0 2px 12px #181c3220;" onsubmit="event.preventDefault();alert('Thank you for registering! Our team will reach out to you soon.');this.reset();">
+          <div style="margin-bottom:1.2em;">
+            <label for="fullname" style="font-weight:600;display:block;margin-bottom:0.4em;">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Your full name" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <div style="margin-bottom:1em;">
-            <input type="email" name="email" required placeholder="Email Address" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+          <div style="margin-bottom:1.2em;">
+            <label for="email" style="font-weight:600;display:block;margin-bottom:0.4em;">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <div style="margin-bottom:1em;">
-            <input type="text" name="country" required placeholder="Country" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"/>
+          <div style="margin-bottom:1.2em;display:flex;gap:1em;">
+            <div style="flex:1;">
+              <label for="country" style="font-weight:600;display:block;margin-bottom:0.4em;">Country *</label>
+              <input type="text" id="country" name="country" required placeholder="Country of residence" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
+            </div>
+            <div style="flex:1;">
+              <label for="age" style="font-weight:600;display:block;margin-bottom:0.4em;">Age *</label>
+              <input type="number" id="age" name="age" min="15" max="40" required placeholder="Your age" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
+            </div>
           </div>
-          <div style="margin-bottom:1em;">
-            <select name="interest" required style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;">
-              <option value="">Area of Interest</option>
+          <div style="margin-bottom:1.2em;">
+            <label for="gender" style="font-weight:600;display:block;margin-bottom:0.4em;">Gender *</label>
+            <select id="gender" name="gender" required style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;">
+              <option value="">Select gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="prefernot">Prefer not to say</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.2em;">
+            <label for="interest" style="font-weight:600;display:block;margin-bottom:0.4em;">Primary Area of Interest *</label>
+            <select id="interest" name="interest" required style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;">
+              <option value="">Choose one</option>
               <option value="leadership">Leadership</option>
               <option value="policy">Policy</option>
               <option value="democracy">Democracy</option>
               <option value="networking">Networking</option>
+              <option value="community">Community Projects</option>
+              <option value="advocacy">Advocacy</option>
             </select>
           </div>
-          <div style="margin-bottom:1em;">
-            <textarea name="message" placeholder="Tell us why you want to join (optional)" rows="3" style="width:100%;padding:0.7em;border-radius:10px;border:1px solid #ccc;font-size:1.06rem;"></textarea>
+          <div style="margin-bottom:1.2em;">
+            <label for="experience" style="font-weight:600;display:block;margin-bottom:0.4em;">Relevant Experience</label>
+            <input type="text" id="experience" name="experience" placeholder="Elected office, NGO, campus, etc." style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"/>
           </div>
-          <button class="cta-btn" type="submit">Register</button>
+          <div style="margin-bottom:1.2em;">
+            <label for="why" style="font-weight:600;display:block;margin-bottom:0.4em;">Why do you want to join AAYPL?</label>
+            <textarea id="why" name="why" rows="4" placeholder="Share your motivation (optional)" style="width:100%;padding:0.8em;border-radius:10px;border:1px solid #ccc;font-size:1.08rem;"></textarea>
+          </div>
+          <div style="margin-bottom:1.2em;">
+            <label style="display:flex;align-items:center;gap:0.6em;cursor:pointer;">
+              <input type="checkbox" name="subscribe" checked style="accent-color:#ffd700;">
+              Subscribe to our newsletter for updates and opportunities
+            </label>
+          </div>
+          <button class="cta-btn" type="submit" style="width:100%;margin-top:1em;">Register Now</button>
         </form>
+        <div style="margin-top:2.5em;font-size:1.06rem;color:#181c32;">
+          <b>Already a member?</b> <a href="contact.html" style="color:#ffd700;">Contact us</a> to update your profile.
+        </div>
       </div>
       <div class="mission-side">
+        <div class="mission-quote" style="background:#fff8d1;">
+          “Membership in AAYPL opened doors for me I never imagined. The mentorship, networking, and international exposure are priceless.”
+          <span class="author">– Amina Yusuf, Kenya</span>
+        </div>
+        <div class="mission-quote" style="background:#e7eaf5; border-left-color:#181c32;">
+          “I recommend AAYPL to any young African committed to making a difference.”
+          <span class="author">– Sizwe Moyo, South Africa</span>
+        </div>
         <div class="mission-quote">
-          “Together, we build tomorrow’s Africa.”
+          “Your journey as a future leader begins here. Welcome to the family!”
+          <span class="author">– AAYPL Team</span>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="stats-section">
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-number">16K+</div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">70%</div>
+        <div class="stat-label">Women & Marginalized Voices</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Exclusive Events/Year</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">African Countries</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Why Join?</h2>
+    <p>
+      <b>✔ Network:</b> Meet and collaborate with leaders across Africa.<br>
+      <b>✔ Grow:</b> Access exclusive workshops, mentorship, and resources.<br>
+      <b>✔ Lead:</b> Represent your community and shape the continent’s future.<br>
+      <b>✔ Influence:</b> Participate in high-level policy dialogues and advocacy.
+    </p>
+    <a href="register.html" class="cta-btn">Become a Member</a>
+  </section>
+
   <footer>
     <div class="footer-content">
       <div class="footer-logo"><img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL</div>
