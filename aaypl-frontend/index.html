@@ -9,23 +9,29 @@
   <link rel="icon" href="assets/aaypl-favicon.png" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="navbar-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>
-        AAYPL
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="https://blog.aaypl.org" target="_blank" rel="noopener">Blog</a>
-        <a href="https://events.aaypl.org" target="_blank" rel="noopener">Events</a>
-        <a href="contact.html">Contact</a>
-        <a href="register.html" class="join-btn">Join Now</a>
-      </div>
+  <!-- Place this inside <body> at the top of your HTML files -->
+<nav>
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL
+    </a>
+    <!-- Hamburger for mobile -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="join-btn">Join Now</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section class="hero">
