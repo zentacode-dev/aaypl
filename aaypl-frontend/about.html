@@ -5,154 +5,279 @@
   <title>About | AAYPL</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(120deg, #181c32 65%, #292b44 100%);
+      color: #ffd700;
+      padding: 3em 1em 2em 1em;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: .6em;
+    }
+    .about-hero p {
+      font-size: 1.18rem;
+      color: #fff;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .about-section {
+      max-width: 900px;
+      margin: 2em auto;
+      background: #232645;
+      border-radius: 18px;
+      padding: 2em 1.5em;
+      color: #ffd700;
+      box-shadow: 0 2px 18px #181c3220;
+    }
+    .about-section h2 {
+      font-size: 1.5em;
+      font-weight: 800;
+      margin-bottom: 1em;
+      color: #ffd700;
+      text-align: center;
+    }
+    .about-section p {
+      color: #fff;
+      font-size: 1.08em;
+      line-height: 1.7;
+      margin-bottom: 1.2em;
+      text-align: center;
+    }
+    .values-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5em;
+      margin: 2em 0 1.5em 0;
+    }
+    .value-item {
+      background: #181c32;
+      border-radius: 13px;
+      color: #ffd700;
+      padding: 1.2em 1.7em;
+      min-width: 180px;
+      max-width: 250px;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 2px 8px #0003;
+      font-size: 1.1em;
+    }
+    /* Founder Section */
+    .founder-section {
+      background:#232645;
+      color:#ffd700;
+      padding:2em 1em;
+      border-radius:14px;
+      max-width:700px;
+      margin:2em auto;
+      text-align:center;
+      box-shadow:0 2px 14px #181c3230;
+    }
+    .founder-section h2 {
+      font-size:1.5em;
+      font-weight:800;
+      margin-bottom:1em;
+      color: #ffd700;
+    }
+    .founder-img {
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:0 2px 12px #0005;
+      border:3px solid #ffd700;
+      margin-bottom:1em;
+    }
+    .founder-name {
+      font-size:1.2em;
+      font-weight:700;
+    }
+    .founder-bio {
+      color:#fff;
+      margin-top:0.7em;
+      font-size:1.05em;
+      max-width:400px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    /* Timeline */
+    .timeline-section {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 2em 1.5em;
+      background: #181c32;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #181c3220;
+      color: #ffd700;
+    }
+    .timeline-section h2 {
+      text-align: center;
+      color: #ffd700;
+      font-size: 1.4em;
+      font-weight: 800;
+      margin-bottom: 1.2em;
+    }
+    .timeline {
+      border-left: 4px solid #ffd700;
+      padding-left: 1.5em;
+      margin: 0;
+    }
+    .timeline-event {
+      margin-bottom: 1.5em;
+      position: relative;
+    }
+    .timeline-event:before {
+      content: '';
+      position: absolute;
+      left: -1.65em;
+      top: 0.3em;
+      width: 1em;
+      height: 1em;
+      background: #ffd700;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px #ffd70040;
+    }
+    .timeline-year {
+      color: #ffd700;
+      font-weight: bold;
+      margin-bottom: 0.3em;
+      font-size: 1.1em;
+    }
+    .timeline-text {
+      color: #fff;
+      font-size: 1em;
+      margin-bottom: 0.2em;
+    }
+    /* Responsive */
+    @media (max-width:900px) {
+      .about-section, .founder-section, .timeline-section {
+        padding: 1.2em 0.5em;
+      }
+      .values-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+      }
+      .value-item {
+        min-width: 0;
+        width: 90%;
+      }
+    }
+    @media (max-width:600px) {
+      .about-hero h1 {
+        font-size: 1.4em;
+      }
+      .about-section h2, .founder-section h2, .timeline-section h2 {
+        font-size: 1.14em;
+      }
+      .about-section, .founder-section, .timeline-section {
+        border-radius: 7px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Responsive Navbar (reuse your improved code here) -->
   <nav>
-  <div class="navbar-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="ourblog.com">Blog</a>
-      <a href="events.html">Events</a>
-      <a href="contact.html">Contact</a>
-      <a href="register.html" class="join-btn">Join Now</a>
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html" class="join-btn">Join Now</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <section>
-    <h2 class="section-title">About AAYPL</h2>
-    <div class="mission-content">
-      <div class="mission-main">
-        <p>
-          The All Africa Young Political Leaders (AAYPL) is a leading pan-African organization dedicated to uniting, empowering, and amplifying young political leaders across the continent. Our mission is to foster democratic values, ethical leadership, and policy influence through a strong and diverse community of youth changemakers.
-        </p>
-        <div class="mission-col">
-          <h3>Our Vision</h3>
-          <ul>
-            <li>To be the premier platform for Africa’s emerging political leaders</li>
-            <li>To nurture a new generation of ethical, innovative, and responsible leadership</li>
-            <li>To champion sustainable development, peace, and unity across Africa</li>
-          </ul>
-        </div>
-        <div class="mission-col yellow">
-          <h3>Core Values</h3>
-          <ul>
-            <li>Integrity and Transparency</li>
-            <li>Inclusiveness and Diversity</li>
-            <li>Innovation and Collaboration</li>
-            <li>Resilience and Accountability</li>
-          </ul>
-        </div>
-        <div class="mission-col">
-          <h3>What We Do</h3>
-          <ul>
-            <li>Organize summits, conferences, and leadership development programs</li>
-            <li>Facilitate policy dialogues and advocacy campaigns</li>
-            <li>Promote youth participation in democratic processes</li>
-            <li>Support youth-led initiatives and community projects</li>
-            <li>Provide mentorship and networking opportunities</li>
-          </ul>
-        </div>
-        <div class="mission-col yellow">
-          <h3>Our History</h3>
-          <ul>
-            <li>Founded in 2017 by a coalition of passionate young leaders from 12 African countries</li>
-            <li>Now present in over 50 African nations and in the diaspora</li>
-            <li>Recognized by major continental and international organizations</li>
-          </ul>
-        </div>
-        <div class="mission-col">
-          <h3>Strategic Objectives</h3>
-          <ul>
-            <li>Empower youth with the skills and knowledge to lead</li>
-            <li>Advocate for youth-friendly policies at all levels</li>
-            <li>Facilitate cross-cultural exchanges and partnerships</li>
-            <li>Drive innovation in governance and civic engagement</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mission-side">
-        <div class="mission-quote">
-          “Africa’s future lies in the hands of its youth. At AAYPL, we believe in the power of young leaders to rewrite the narrative of our continent.”
-          <span class="author">– AAYPL Founders</span>
-        </div>
-        <div class="mission-quote" style="background:#e7eaf5; border-left-color:#181c32;">
-          “Join us in building an Africa where youth are not just beneficiaries, but drivers of transformation.”
-        </div>
-        <div class="mission-quote" style="background:#fff8d1;">
-          “One youth, one voice, one Africa.”
-        </div>
-      </div>
-    </div>
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <h1>About All Africa Young Political Leaders (AAYPL)</h1>
+    <p>
+      AAYPL is a dynamic network uniting, empowering, and amplifying young political leaders across Africa. We are committed to shaping the future of the continent through leadership, democracy, and policy advocacy. Our mission is to build a continent where youth voices drive change, foster inclusive governance, and create lasting impact.
+    </p>
   </section>
 
-  <section class="stats-section">
-    <div class="stats-row">
-      <div class="stat">
-        <div class="stat-number">50+</div>
-        <div class="stat-label">Countries Represented</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">15K+</div>
-        <div class="stat-label">Registered Members</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">800+</div>
-        <div class="stat-label">Projects & Events</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Partner Organizations</div>
-      </div>
+  <!-- Our Story -->
+  <section class="about-section">
+    <h2>Our Story</h2>
+    <p>
+      Founded by a passionate youth leader who envisioned a united Africa led by young, ethical, and innovative minds, AAYPL has become a beacon for aspiring political leaders. From grassroots movements to international forums, our members are at the forefront of positive transformation, civic engagement, and policy influence.
+    </p>
+    <div class="values-list">
+      <div class="value-item">Leadership</div>
+      <div class="value-item">Democracy</div>
+      <div class="value-item">Inclusivity</div>
+      <div class="value-item">Integrity</div>
+      <div class="value-item">Collaboration</div>
+    </div>
+    <p>
+      Our organization thrives on the strength of our members, partners, and the communities we serve. Together, we are building a brighter, more united future for Africa.
+    </p>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="founder-section">
+    <h2>Meet the Founder</h2>
+    <img src="assets/founder.jpg" alt="AAYPL Founder" class="founder-img">
+    <div class="founder-name">Jane Doe</div>
+    <div class="founder-bio">
+      Jane Doe is the visionary founder of AAYPL, dedicated to uniting and empowering Africa’s next generation of political leaders. Her passion for youth leadership and inclusive governance continues to shape the organization’s mission and growth.
     </div>
   </section>
 
   <!-- Timeline Section -->
-  <section>
-    <h2 class="section-title">Our Journey</h2>
-    <div class="mission-content">
-      <div class="mission-main">
-        <div style="margin-bottom:1.5em;">
-          <b>2017:</b> AAYPL is founded by a small group of youth activists in Lagos, Nigeria.<br>
-          <b>2019:</b> First Pan-African Youth Democracy Summit held in Nairobi.<br>
-          <b>2021:</b> Launch of the AAYPL Policy Innovation Lab.<br>
-          <b>2023:</b> Membership reaches 10,000, with representation in every African country.<br>
-          <b>2024:</b> AAYPL wins the Africa Rising Youth Award for Leadership.
-        </div>
-        <div class="mission-col yellow">
-          <h3>Our Impact</h3>
-          <ul>
-            <li>More than 200 youth-led policy proposals adopted at national or local level</li>
-            <li>Hundreds of young leaders elected or appointed to public office</li>
-            <li>Thousands of lives improved through community initiatives</li>
-          </ul>
-        </div>
+  <section class="timeline-section">
+    <h2>Our Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-text">AAYPL founded with a vision to unite young African political leaders.</div>
       </div>
-      <div class="mission-side">
-        <img src="https://images.unsplash.com/photo-1532635249-59527f07b6ad?auto=format&fit=crop&w=400&q=80" alt="AAYPL Leaders" style="width:100%;border-radius:12px;box-shadow:0 2px 12px #181c3240;">
+      <div class="timeline-event">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-text">First Pan-African Youth Leadership Summit held with over 300 delegates.</div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-text">Membership surpassed 10,000 across 30+ African countries.</div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-text">Launched the AAYPL Policy Influence Program and expanded into 50 countries.</div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Be Part of the Story</h2>
-    <p>We are always looking for passionate volunteers, mentors, and partners. If you share our values and vision, join us today!</p>
+  <!-- Call to Action -->
+  <section class="about-section" style="background:#181c32;color:#ffd700;">
+    <h2>Join Us</h2>
+    <p>
+      Are you passionate about Africa’s future? Do you believe in the power of youth-led change? Become a part of AAYPL and help shape the continent’s destiny.
+    </p>
     <a href="register.html" class="cta-btn">Become a Member</a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div class="footer-logo"><img src="assets/aaypl-logo.png" alt="AAYPL Logo"/>AAYPL</div>
+      <div class="footer-logo">
+        <img src="assets/aaypl-logo.png" alt="AAYPL Logo" style="height:38px;width:38px;vertical-align:middle;border-radius:50%;box-shadow:0 1px 6px #0002;">
+        <span style="font-weight:700;font-size:1.3rem;color:#ffd700;margin-left:0.6em;">AAYPL</span>
+      </div>
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
@@ -161,23 +286,62 @@
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="#"><span>🐦</span></a>
-        <a href="#"><span>📘</span></a>
-        <a href="#"><span>📸</span></a>
-        <a href="#"><span>🔗</span></a>
+        <!-- Facebook -->
+        <a href="https://facebook.com/aayplorg" target="_blank" aria-label="Facebook" style="color:#ffd700;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#181c32"/>
+            <path d="M17.5 8.5h-2a2 2 0 0 0-2 2v2h-1.5V14h1.5v5h3v-5H17l.5-1.5h-2.5v-1c0-.28.22-.5.5-.5h2V8.5z" fill="#ffd700"/>
+          </svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@aayplorg" target="_blank" aria-label="TikTok" style="color:#ffd700;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#181c32"/>
+            <path d="M18 7.25v6.24a3.74 3.74 0 1 1-3.74-3.74h.01V12a2.5 2.5 0 1 0 2.5 2.5h.01V7.25h1.22a3.48 3.48 0 0 0 1.51 2.03v1.33a4.72 4.72 0 0 1-2.73-1.03V19a5.75 5.75 0 1 1 0-11.5h.22z" fill="#ffd700"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/aayplorg" target="_blank" aria-label="Instagram" style="color:#ffd700;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#181c32"/>
+            <rect x="8" y="8" width="12" height="12" rx="4" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="14" cy="14" r="3" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="18.5" cy="9.5" r="1" fill="#ffd700"/>
+          </svg>
+        </a>
+        <!-- Twitter/X -->
+        <a href="https://twitter.com/aayplorg" target="_blank" aria-label="Twitter" style="color:#ffd700;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#181c32"/>
+            <path d="M19.9 9.2l-4.7 6.4h2.9l-3 4.2h1.6L21 10.2l-1.1-.9zm-8.2 8.4l2.7-3.7h-2.6l3-4.2h-1.6l-3.8 5.4 1.1.9 4.7-6.4h-2.9l-2.7 3.7h2.6l-3 4.2h1.6l3.8-5.4-1.1-.9z" fill="#ffd700"/>
+          </svg>
+        </a>
       </div>
     </div>
-    <div style="margin-top:2em;font-size:0.96rem;color:#ffd700;">&copy; 2025 All Africa Young Political Leaders (AAYPL). All Rights Reserved.</div>
+    <div style="margin-top:2em;font-size:0.96rem;color:#ffd700;">
+      &copy; 2025 All Africa Young Political Leaders (AAYPL). All Rights Reserved.
+    </div>
   </footer>
   <a href="https://wa.me/2348000000000" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
   <button id="scrollToTopBtn" title="Back to Top">↑</button>
   <script>
+    // Navbar hamburger JS
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle?.addEventListener('change', function() {
+      if (navToggle.checked) {
+        navLinks.style.display = 'flex';
+      } else {
+        navLinks.style.display = '';
+      }
+    });
+    // Scroll to top button logic
     const scrollBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
       if(window.scrollY > 300) scrollBtn.style.display = 'block';
       else scrollBtn.style.display = 'none';
     });
-    scrollBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:"smooth"}));
+    scrollBtn?.addEventListener('click', () => window.scrollTo({top:0,behavior:"smooth"}));
   </script>
 </body>
 </html>
