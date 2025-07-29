@@ -94,6 +94,126 @@ nav .join-btn:hover {
   color: #ffd700;
   text-shadow: 0 6px 32px #181c32;
 }
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.5em 1em;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-decoration: none;
+  gap: 0.6em;
+}
+.brand img {
+  height: 42px;
+  width: 42px;
+  margin-right: 0.5em;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+.nav-links a {
+  color: #ffd700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.4em 0.7em;
+  border-radius: 6px;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background: #ffd70022;
+  color: #fff;
+}
+.join-btn {
+  background: #ffd700;
+  color: #181c32;
+  font-weight: bold;
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  margin-left: 0.7em;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.18s, color 0.18s;
+}
+.join-btn:hover,
+.join-btn:focus {
+  background: #181c32;
+  color: #ffd700;
+}
+
+.nav-toggle {
+  display: none; /* hide checkbox */
+}
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 32px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 999;
+  margin-left: auto;
+}
+.nav-toggle-label span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #ffd700;
+  margin: 4px 0;
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+/* Responsive styles for mobile */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #181c32;
+    gap: 0;
+    box-shadow: 0 2px 8px #181c3260;
+    padding: 0;
+    display: none;
+    z-index: 99;
+  }
+  .nav-links a {
+    padding: 1.2em 0;
+    border-bottom: 1px solid #232645;
+    width: 100%;
+    text-align: center;
+    background: #181c32;
+    color: #ffd700;
+  }
+  .nav-toggle-label {
+    display: flex;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+}
+/* Hamburger animation */
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 .hero p {
   font-size: 1.25rem;
   max-width: 560px;
